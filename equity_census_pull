@@ -1,0 +1,15 @@
+import requests
+
+state = '06'
+county = '037'
+tract = '*'
+vars = 'NAME,' \
+       'B01001_001E,' \
+       ''
+vars_list = ['Tract', 'State', 'County', 'Tract']
+payload = 
+
+url = 'https://api.census.gov/data/2019/acs/acs5?get='
+
+r = requests.get(url + vars + '&for=tract:' + tract + '&in=county:' + county + '&in=state:' + state)
+print(r.text)
